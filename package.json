@@ -1,0 +1,25 @@
+{
+  "name": "nyt-dev-test",
+  "version": "0.1.0",
+  "description": "NYT dev test",
+  "scripts": {
+    "start": "npm run webpack",
+    "dev": "webpack serve",
+    "webpack": "webpack --watch"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "node-sass": "^5.0.0",
+    "sass": "^1.32.6",
+    "sass-loader": "^11.0.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
