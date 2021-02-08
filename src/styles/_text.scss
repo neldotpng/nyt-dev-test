@@ -1,0 +1,25 @@
+.headline {
+  font-size: font-size(headline);
+
+  @include max(breakpoint(sm)) {
+    font-size: font-size(headline, $is-mobile);
+  }
+}
+
+.summary {
+  font-size: font-size(body);
+
+  @include max(breakpoint(sm)) {
+    font-size: font-size(body, $is-mobile);
+  }
+}
+
+.date,
+.byline {
+  color: $grey;
+  font-size: font-size(date);
+
+  @include max(breakpoint(sm)) {
+    font-size: font-size(date, $is-mobile);
+  }
+}

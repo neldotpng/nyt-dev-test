@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+$is-mobile: true;
+
+$font-sizes-desktop: (
+  headline: 36px,
+  body: 25px,
+  date: 19px,
+  footer: 22px,
+);
+
+$font-sizes-mobile: (
+  headline: 23px,
+  body: 15px,
+  date: 13px,
+);
+
+@function font-size($val, $mobile: false) {
+  @if $mobile {
+    @return map-get($font-sizes-mobile, $val);
+  } @else {
+    @return map-get($font-sizes-desktop, $val);
+  }
+}
