@@ -33,14 +33,16 @@ module.exports = {
         ],
       },
       {
-        test: /\.html$/,
-        loader: 'html-loader',
+        test: /\.pug$/,
+        use: {
+          loader: 'pug-loader',
+        }
       },
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: 'src/index.pug',
     })
   ]
 };
