@@ -1,5 +1,16 @@
-$body-color: red;
+@import "./styles/variables";
+@import "./styles/text";
+
+@import "./styles/partials/nav";
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  background-color: $body-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
 }
