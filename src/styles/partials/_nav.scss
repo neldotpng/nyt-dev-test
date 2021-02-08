@@ -1,0 +1,37 @@
+.nav {
+  border-bottom: 2px solid $light-grey;
+  height: 150px;
+  padding: 0 40px 0 95px;
+}
+
+.nav-container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.nav-logo {
+  max-width: 290px;
+}
+
+.nav-language-toggle {
+  border: 2px solid $lightest-grey;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.toggle-button {
+  background-color: $white;
+  border: 0;
+  font-size: font-size(body);
+  width: 200px;
+  height: 80px;
+  transition: background 0.2s ease-in-out;
+
+  &.is-inactive {
+    background-color: $lightest-grey;
+  }
+}
