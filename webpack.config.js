@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
   entry: './src/app.js',
   output: {
@@ -30,6 +32,15 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.html$/,
+        loader: 'html-loader',
+      },
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+    })
+  ]
 };
