@@ -1,0 +1,33 @@
+.footer {
+  align-items: center;
+  background-color: $black;
+  color: $white;
+  display: flex;
+  height: 95px;
+  justify-content: center;
+}
+
+.footer-title {
+  font-size: font-size(footer);
+  font-weight: 600;
+  text-align: center;
+
+  @include max(breakpoint(sm)) {
+    font-weight: 700;
+  }
+}
+
+.footer-description {
+  &:before {
+    content: '| ';
+  }
+
+  @include max(breakpoint(sm)) {
+    display: block;
+    font-weight: 400;
+    
+    &:before {
+      content: '';
+    }
+  }
+}
