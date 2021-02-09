@@ -29,6 +29,7 @@
   width: 35px;
   position: relative;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 
   &:before, 
   &:after {
@@ -48,6 +49,11 @@
     bottom: 6px;
     transform: rotate(40deg);
   }
+
+  &:hover {
+    opacity: 0.6;
+    transform: translateX(-2px);
+  }
 }
 
 .caret-right {
@@ -57,5 +63,10 @@
 
   &:after {
     transform: rotate(-40deg);
+  }
+
+  &:hover {
+    opacity: 0.6;
+    transform: translateX(2px);
   }
 }
