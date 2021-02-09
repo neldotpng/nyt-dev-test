@@ -1,0 +1,36 @@
+.article {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  padding: 45px 0;
+  
+  &:not(:last-of-type) {
+    border-bottom: 2px solid $light-grey;
+  }
+}
+
+.article-date,
+.article-byline {
+  color: $grey;
+  font-size: font-size(date);
+  font-weight: 600;
+}
+
+.article-link {
+  color: $black;
+  text-decoration: none;
+  width: 50%;
+}
+
+.article-thumbnail {
+  height: 210px;
+  max-width: 320px;
+  overflow: hidden;
+  width: 22.5%;
+
+  > img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+  }
+}

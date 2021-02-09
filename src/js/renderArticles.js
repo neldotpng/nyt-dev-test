@@ -3,7 +3,7 @@ window.NYTD = {};
 
 const renderArticles = () => {
   const url = "http://np-ec2-nytimes-com.s3.amazonaws.com/dev/test/nyregion.js"
-  const rootEl = document.querySelector(".root-container");
+  const containerEl = document.querySelector(".articles-container");
   
   const s = document.createElement("script");
   s.src = `${url}`;
@@ -42,7 +42,7 @@ const renderArticles = () => {
       html = html + template(data[i]);
     }
 
-    rootEl.innerHTML = html;
+    containerEl.innerHTML = html;
   }
 }
 

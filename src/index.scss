@@ -3,6 +3,7 @@
 
 @import "./styles/partials/nav";
 @import "./styles/partials/footer";
+@import "./styles/partials/article";
 
 * {
   box-sizing: border-box;
@@ -15,3 +16,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
 }
+
+.articles-container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 40px 0 95px;
+}
+
