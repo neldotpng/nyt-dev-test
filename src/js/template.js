@@ -22,12 +22,14 @@ const template = (data) => {
 
   return `
     <div class="article">
-      <aside class="article-date">${newData.date}</aside>
-      <a class="article-link" href="#">
-        <h1 class="headline article-headline">${newData.headline}</h1>
-        <p class="summary article-summary">${newData.summary}</p>
-        <h6 class="byline article-byline">${newData.byline}</h6>
-      </a>
+      <div class="article-container">
+        <aside class="date article-date">${newData.date}</aside>
+        <a class="article-link" href="#">
+          <h1 class="headline article-headline">${newData.headline}</h1>
+          <p class="summary article-summary">${newData.summary}</p>
+          <h6 class="byline article-byline">${newData.byline}</h6>
+        </a>
+      </div>
       <div class="article-thumbnail">
         <img src="${baseImageUrl + newData.imageUrl}" alt="${newData.caption}"/>
       </div>

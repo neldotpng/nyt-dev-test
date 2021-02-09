@@ -7,24 +7,55 @@
   &:not(:last-of-type) {
     border-bottom: 2px solid $light-grey;
   }
+
+  @include max(breakpoint(md)) {
+    padding: 20px 0;
+  }
+}
+
+.article-container {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+
+  @include max(breakpoint(md)) {
+    flex-flow: column;
+  }
 }
 
 .article-date,
 .article-byline {
   color: $grey;
-  font-size: font-size(date);
   font-weight: 600;
+}
+
+.article-date {
+  line-height: 40px;
+  width: 33%;
+
+  @include max(breakpoint(md)) {
+    line-height: 1.6;
+  }
 }
 
 .article-link {
   color: $black;
   text-decoration: none;
-  width: 50%;
+  width: 100%;
+}
+
+.article-headline {
+  margin-bottom: 8px;
+}
+
+.article-summary {
+  margin-bottom: 12px;
 }
 
 .article-thumbnail {
   height: 210px;
   max-width: 320px;
+  margin-top: 10px;
   overflow: hidden;
   width: 22.5%;
 
@@ -32,5 +63,10 @@
     object-fit: cover;
     object-position: 50% 50%;
     width: 100%;
+  }
+
+  @include max(breakpoint(md)) {
+    margin-top: 25px;
+    height: auto;
   }
 }

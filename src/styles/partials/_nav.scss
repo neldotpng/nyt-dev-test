@@ -2,6 +2,15 @@
   border-bottom: 2px solid $light-grey;
   height: 150px;
   padding: 0 40px 0 95px;
+
+  @include max(breakpoint(lg)) {
+    padding: 0 40px;
+  }
+
+  @include max(breakpoint(sm)) {
+    padding: 50px 20px 30px;
+    height: auto;
+  }
 }
 
 .nav-container {
@@ -11,10 +20,28 @@
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1440px;
+
+  @include max(breakpoint(sm)) {
+    flex-flow: column;
+    justify-content: space-around;
+  }
 }
 
 .nav-logo {
   max-width: 290px;
+
+  @include max(breakpoint(lg)) {
+    max-width: 200px;
+  }
+
+  @include max(breakpoint(md)) {
+    max-width: 150px;
+  }
+
+  @include max(breakpoint(sm)) {
+    max-width: 250px;
+    margin-bottom: 30px;
+  }
 }
 
 .nav-language-toggle {
@@ -27,11 +54,19 @@
   background-color: $white;
   border: 0;
   font-size: font-size(body);
+  font-weight: 700;
   width: 200px;
   height: 80px;
   transition: background 0.2s ease-in-out;
 
   &.is-inactive {
     background-color: $lightest-grey;
+    font-weight: 400;
+  }
+
+  @include max(breakpoint(lg)) {
+    width: 100px;
+    height: 40px;
+    font-size: font-size(date, $is-mobile);
   }
 }

@@ -4,6 +4,7 @@ body {
 
 .headline {
   font-size: font-size(headline);
+  line-height: 1.25;
 
   @include max(breakpoint(sm)) {
     font-size: font-size(headline, $is-mobile);
@@ -12,6 +13,7 @@ body {
 
 .summary {
   font-size: font-size(body);
+  line-height: 1.2;
 
   @include max(breakpoint(sm)) {
     font-size: font-size(body, $is-mobile);
