@@ -2,5 +2,7 @@
 To run locally clone and run:
 `npm run dev`
 
-Alternatively, you can build, then open the resulting index.html file:
+The project runs at `localhost:9000`
+
+Alternatively, you can build, then open the resulting `index.html` file in the `dist` folder:
 `npm run build`
