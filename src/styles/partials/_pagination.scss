@@ -1,0 +1,57 @@
+.pagination {
+  border-top: 2px solid $light-grey;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 45px 40px 70px 95px;
+}
+
+.pagination-content {
+  align-items: flex-end;
+  display: flex;
+}
+
+.pagination-carets {
+  display: flex;
+  margin-left: 10px;
+}
+
+.caret {
+  height: 24px;
+  width: 35px;
+  position: relative;
+  cursor: pointer;
+
+  &:before, 
+  &:after {
+    content: '';
+    height: 1px;
+    width: 18px;
+    background-color: $black;
+    position: absolute;
+  }
+
+  &:before {
+    top: 6px;
+    transform: rotate(-40deg);
+  }
+
+  &:after {
+    bottom: 6px;
+    transform: rotate(40deg);
+  }
+}
+
+.caret-right {
+  &:before {
+    transform: rotate(40deg);
+  }
+
+  &:after {
+    transform: rotate(-40deg);
+  }
+}
