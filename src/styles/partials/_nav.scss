@@ -7,6 +7,10 @@
     padding: 0 40px;
   }
 
+  @include max(breakpoint(md)) {
+    padding: 0 20px;
+  }
+
   @include max(breakpoint(sm)) {
     padding: 50px 20px 30px;
     height: auto;
@@ -51,17 +55,23 @@
 }
 
 .toggle-button {
-  background-color: $white;
+  cursor: pointer;
   border: 0;
   font-size: font-size(body);
-  font-weight: 700;
+  background-color: $lightest-grey;
+  font-weight: 400;
   width: 200px;
   height: 80px;
   transition: background 0.2s ease-in-out;
 
-  &.is-inactive {
-    background-color: $lightest-grey;
-    font-weight: 400;
+  &.is-active {
+    background-color: $white;
+    font-weight: 700;
+    pointer-events: none;
+  }
+
+  &:not(.is-active):hover {
+    background-color: $light-grey;
   }
 
   @include max(breakpoint(lg)) {
